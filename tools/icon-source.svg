@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#2A3245"/>
+      <stop offset="1" stop-color="#1A2030"/>
+    </linearGradient>
+    <linearGradient id="ink" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FBF6EC"/>
+      <stop offset="1" stop-color="#E8DCC8"/>
+    </linearGradient>
+  </defs>
+
+  <rect x="0" y="0" width="1024" height="1024" rx="228" ry="228" fill="url(#bg)"/>
+
+  <g stroke="url(#ink)" stroke-linecap="round" fill="none">
+    <path d="M604 540 C648 600 704 620 766 610" stroke-width="44"/>
+    <path d="M420 540 C376 600 320 620 258 610" stroke-width="44"/>
+    <path d="M572 556 C606 626 662 664 730 674" stroke-width="44"/>
+    <path d="M452 556 C418 626 362 664 294 674" stroke-width="44"/>
+    <path d="M540 566 C556 646 596 700 656 726" stroke-width="44"/>
+    <path d="M484 566 C468 646 428 700 368 726" stroke-width="44"/>
+    <path d="M512 572 C512 656 500 712 484 748" stroke-width="44"/>
+  </g>
+
+  <path d="M296 432 C296 288 392 208 512 208 C632 208 728 288 728 432
+           C728 512 700 560 652 586 L372 586 C324 560 296 512 296 432 Z"
+        fill="url(#ink)"/>
+
+  <circle cx="458" cy="424" r="21" fill="#1E2432"/>
+  <circle cx="566" cy="424" r="21" fill="#1E2432"/>
+  <path d="M488 486 C500 500 524 500 536 486" stroke="#1E2432" stroke-width="14"
+        stroke-linecap="round" fill="none" opacity="0.85"/>
+</svg>
