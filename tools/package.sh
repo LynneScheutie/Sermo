@@ -15,12 +15,20 @@ VERSION=$(/usr/libexec/PlistBuddy -c "Print :CFBundleShortVersionString" "$PLIST
 INSTALL=0
 [ "${1:-}" = "--install" ] && INSTALL=1
 
-echo "==> 1/5 编译　版本 ${VERSION}"
+echo "==> 1/5 编译　版本 ${VERSION}（arm64 + x86_64 通用二进制）"
 mkdir -p "$ROOT/build"
-swiftc -O -parse-as-library -swift-version 6 \
-    -o "$ROOT/build/Sermo" \
-    $(find "$ROOT/Sources" -name '*.swift') \
-    -framework WebKit
+MIN_MACOS=14.0
+for ARCH in arm64 x86_64; do
+    swiftc -O -parse-as-library -swift-version 6 \
+        -target "${ARCH}-apple-macos${MIN_MACOS}" \
+        -o "$ROOT/build/Sermo-$ARCH" \
+        $(find "$ROOT/Sources" -name '*.swift') \
+        -framework WebKit
+done
+# 合成一个可执行文件，Apple 芯片与 Intel 都跑同一份安装包
+lipo -create -output "$ROOT/build/Sermo" \
+    "$ROOT/build/Sermo-arm64" "$ROOT/build/Sermo-x86_64"
+printf '  架构: %s\n' "$(lipo -archs "$ROOT/build/Sermo")"
 
 echo "==> 2/5 组装 App"
 rm -rf "$APP"

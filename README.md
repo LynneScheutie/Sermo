@@ -2,7 +2,7 @@
 
 QuotOS Aether 的独立 macOS 客户端。把 Aether 界面单独拿出来，配上自己的设置面板——打开就能用，不用先进主程序。
 
-纯 Swift + WebKit，无第三方依赖，产物 2.9 MB。
+纯 Swift + WebKit，无第三方依赖，产物 5.1 MB（arm64 + x86_64 通用二进制）。
 
 ## 它是什么
 
@@ -38,6 +38,8 @@ Aether 原本是 Lawlearn 里的一个小窗，API 入口挂在主程序的设�
 ./tools/package.sh              # 产出 dist/Sermo.app
 ./tools/package.sh --install    # 另外覆盖安装到 /Applications
 ```
+
+脚本会把两个架构各编一遍再用 `lipo` 合成一份，所以 Apple 芯片与 Intel 跑的是同一个安装包。单架构调试可以直接 `swiftc`，省一半编译时间。
 
 单独跑起来调试：
 
