@@ -72,6 +72,8 @@ Swift → JS    window.__sermoPrefs({key, providerID, model, providers:[...]})
 
 正式安装包在 [Sermo-download](https://github.com/LynneScheutie/Sermo-download) 发布，本仓库不含二进制。
 
-## 版权
+## 许可证
+
+[MIT](LICENSE)。可以自由使用、修改、商用与再分发，保留版权声明即可。
 
 © Eisice
