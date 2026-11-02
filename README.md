@@ -70,7 +70,7 @@ Swift → JS    window.__sermoPrefs({key, providerID, model, providers:[...]})
 
 ## 安装包
 
-正式安装包在 [Sermo-download](https://github.com/QuotOS-Aurora-Lab/Sermo-download) 发布，本仓库不含二进制。
+正式安装包在 [Sermo_Download](https://github.com/QuotOS-Aurora-Lab/Sermo_Download) 发布，本仓库不含二进制。
 
 ## 许可证
 
